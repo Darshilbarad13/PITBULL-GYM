@@ -1,0 +1,105 @@
+/* --- CSS VARIABLES (Easy Color Changing) --- */
+:root {
+    --primary-orange: #ff4500; /* Adjust this to match your logo exactly */
+    --dark-bg: #202020c0;        /* Background color */
+    --text-white: #ffffff;
+    --text-grey: #cccccc;
+}
+
+/* --- SECTION STYLING --- */
+.about-section {
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    padding: 80px 20px;
+    font-family: 'Montserrat', sans-serif; /* Bold, modern font */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    max-width: 800px; /* Keeps text from getting too wide to read */
+    width: 100%;
+}
+
+/* --- TYPOGRAPHY --- */
+.about-heading {
+    font-size: 3rem; /* Big and bold */
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.text-highlight {
+    color: var(--primary-orange);
+}
+
+/* --- DECORATIVE LINE --- */
+.divider-line {
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 0 auto 30px auto; /* Centers the line */
+    border-radius: 2px;
+}
+
+/* --- BODY TEXT --- */
+.about-intro {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.location-tag {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+}
+
+.about-text {
+    font-family: 'Roboto', sans-serif; /* Easier to read for paragraphs */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-grey);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* --- FINAL TAGLINE --- */
+.about-tagline {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--text-white); /* Optional box border */
+    display: inline-block;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+}
+
+.about-tagline:hover {
+    background-color: var(--text-white);
+    color: var(--dark-bg);
+    border-color: var(--text-white);
+    cursor: default; /* Just a visual effect, not a button */
+}
+
+/* --- RESPONSIVE FOR MOBILE --- */
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 2rem;
+    }
+    
+    .about-intro {
+        font-size: 1.2rem;
+    }
+
+    .about-tagline {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}

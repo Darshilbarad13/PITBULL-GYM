@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background-color: #252525ec;
+  font-family: Arial, sans-serif;
+}
+
+.logo-entry {
+  max-width: 300px;
+  width: 100%;
+  height: fit-content;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

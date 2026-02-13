@@ -1,0 +1,118 @@
+/* General Page Reset for this demo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2b2b2b;
+    /* Matches your dark grey background */
+    color: white;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #2b2b2b;
+}
+
+.contact-header h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid Layout for Contact Details */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: #383838;
+    /* Slightly lighter grey for cards */
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    border-bottom: 4px solid #ff4500;
+    /* The Orange/Red Accent */
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    /* Hover effect */
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #ff4500;
+    /* Accent Color Text */
+}
+
+.contact-card p,
+.contact-card a {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-decoration: none;
+    display: block;
+}
+
+.contact-card a:hover {
+    color: #ff4500;
+}
+
+/* Button Styling */
+.map-btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 40px;
+    background-color: #ff4500;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.map-btn:hover {
+    background-color: #e63e3e;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

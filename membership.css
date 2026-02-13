@@ -1,0 +1,259 @@
+/* --- CORE STYLES --- */
+:root {
+    --primary: #ff4500;
+    /* Safety Orange */
+    --dark: #0f0f0f;
+    --card-bg: #1e1e1e;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+    padding-bottom: 80px;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    color: var(--primary);
+}
+
+.subtitle {
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- PRICING CARDS --- */
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 340px;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #555;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Highlight the Yearly Plan */
+.card.popular {
+    border: 2px solid var(--primary);
+    background: #252525;
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.card.popular:hover {
+    transform: scale(1.08);
+}
+
+.badge {
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.plan-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.price span {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+}
+
+/* Features List in Card */
+.features {
+    list-style: none;
+    text-align: left;
+    margin: 30px 0;
+    flex-grow: 1;
+    /* Pushes button to bottom */
+}
+
+.features li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #ddd;
+}
+
+.features li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* CTA Button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.card.popular .btn {
+    background: var(--primary);
+    color: white;
+}
+
+.card.popular .btn:hover {
+    background: #cc3700;
+    border-color: #cc3700;
+}
+
+/* --- COMPARISON TABLE SECTION --- */
+.comparison-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2.section-title {
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: #2a2a2a;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* First column alignment */
+td:first-child,
+th:first-child {
+    text-align: left;
+    padding-left: 30px;
+    font-weight: 600;
+    color: #ddd;
+}
+
+/* Checkmarks and Crosses */
+.check {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.cross {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Highlight the Yearly Column in table */
+td:nth-child(4),
+th:nth-child(4) {
+    background: rgba(255, 69, 0, 0.05);
+    /* Very subtle orange tint */
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .pricing-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card.popular {
+        transform: scale(1);
+        width: 100%;
+    }
+
+    .comparison-container {
+        overflow-x: scroll;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}

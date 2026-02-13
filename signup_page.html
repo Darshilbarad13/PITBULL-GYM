@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="C:\xampp\htdocs\PROJECT\signup_page.css"> -->
+  <link rel="stylesheet" href="css/signup_page.css">
+  <title>PITBULL GYM - Registration</title>
+</head>
+
+<body>
+  <div>
+    <h2>GYM Membership Registration</h2>
+
+    <form action="signup.php" method="POST" id="signupForm">
+      <label for="firstname">First Name:</label><br>
+      <input type="text" name="fname" id="fname" placeholder="Enter First Name" required><br><br>
+
+      <label for="lastname">Last Name:</label><br>
+      <input type="text" name="lname" id="lname" placeholder="Enter Last Name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" name="phone" id="phone" maxlength="10" placeholder="Contact Number" required><br><br>
+
+      <label for="age">Age:</label><br>
+      <input type="number" name="age" id="age" placeholder="Enter Your Age" required><br><br>
+
+      <label for="gender">Gender:</label><br><br>
+      <input type="radio" name="gender" id="male" value="Male"><label for="male"
+        style="margin-right: 20px;">Male</label>
+      <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label><br><br>
+
+      <label for="membership">Membership Plan:</label><br>
+      <select name="membership" id="membership" required>
+        <option value="" style="color: #ff5833a6;">--Select Plan--</option>
+        <option value="monthly">Monthly --199$</option>
+        <option value="quarterly">Quarterly --499$</option>
+        <option value="yearly">Yearly --1700$</option>
+      </select><br><br>
+
+      <label for="membership">Payment Options:</label><br>
+      <select name="payment" id="payment" required>
+        <option value="" style="color: #ff5833a6;">--Select Option--</option>
+        <option value="cash">Cash</option>
+        <option value="upi">UPI</option>
+        <option value="card">Card</option>
+      </select><br><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" name="password" id="password" maxlength="8" placeholder="Set Password" required><br>
+
+      <label for="Confirm"></label><br>
+      <input type="text" name="confirm" id="confirm" maxlength="8" placeholder="Confirm Password"><br><br>
+
+      <!-- <button type="submit">Submit</button> -->
+       <input type="submit" value="Submit">
+    </form>
+  </div>
+  <script>
+    document.getElementById("signupForm").addEventListener
+      ('submit', function(event) {
+        //event.preventDefault();  //prevent actual form submission
+
+        alert("Registration Successful! Redirecting to Home...");
+        document.location.href="HOME.html";
+      }
+      );
+  </script>
+</body>
+
+</html>
